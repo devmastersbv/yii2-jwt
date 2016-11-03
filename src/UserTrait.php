@@ -107,10 +107,10 @@ trait UserTrait
      * Encodes model data to create custom JWT with model.id set in it
      * @return string encoded JWT
      */
-    public function getJWT()
+    public function getJWT($type=null)
     {
         // Collect all the data
-        $secret      = static::getSecretKey();
+        $secret      = static::getSecretKey($type);
         $currentTime = time();
         $request     = Yii::$app->request;
         $hostInfo    = '';
