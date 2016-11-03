@@ -25,7 +25,7 @@ trait UserTrait
      * Getter for secret key that's used for generation of JWT
      * @return string secret key used to generate JWT
      */
-    protected static function getSecretKey()
+    protected static function getSecretKey($type=null)
     {
         return '';
     }
@@ -48,7 +48,7 @@ trait UserTrait
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        $secret = static::getSecretKey();
+        $secret = static::getSecretKey($type);
 
         // Decode token and transform it into array.
         // Firebase\JWT\JWT throws exception if token can not be decoded
