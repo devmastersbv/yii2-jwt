@@ -1,5 +1,5 @@
 {
-    "name": "damirka/yii2-jwt",
+    "name": "devmastersbv/yii2-jwt",
     "keywords": ["yii", "jwt"],
     "description": "Trait for easier JWT integration",
     "homepage": "https://github.com/damirka/yii2-jwt",
